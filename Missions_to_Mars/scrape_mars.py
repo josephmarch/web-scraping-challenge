@@ -61,7 +61,6 @@ def scrape():
         "news_title": news_title,
         "news_p": news_p,
         "featured_image_url": featured_image_url,
-        "mars_df": mars_df,
         "html_table": html_table,
         "hemisphere_image_urls": hemisphere_image_urls
     }

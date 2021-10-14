@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mission to Mars</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="jumbotron text-center">
+              <h1><strong>Mission to Mars</strong></h1>
+              <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+            </div>
+            <div class="row" id="mars_news">
+                <div class="col-md-12">
+                    <h3 class="heading"><strong>Latest Mars News</strong></h3>
+                    <strong>{{mars_dict.news_title}}</strong>
+                    <br>
+                    <small>{{mars_dict.news_p}}</small>
+                    <br>
+                </div>
+            </div>
+            <div class="row" id="image_and_table">
+                <div class="col-md-6">
+                    <h3 class="heading"><strong>Featured Mars Image</strong></h3>
+                    <img src="{{mars_dict.featured_image_url}}" alt="featured_image" width="100%">
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <strong>Mars Facts</strong>
+                    <br>
+                    {{mars_dict.html_table}}
+                </div>
+            </div>
+            <div class="row" id="hemisphere_title">
+                <h3 class="heading text-center"><strong>Mars Hemispheres</strong></h3>
+                <hr>
+            </div>
+            <div class="row" id="hemispheres">
+                <div class="col-md-4">
+                    <div class="card" style="width: 20rem">
+                        <img class="card-img-top" src="{{mars_dict.hemisphere_image_urls[0].img_url}}" alt="Card image cap" width="100%">
+                        <div class="card-body">
+                            <h3 class="card-title">{{mars_dict.hemisphere_image_urls[0].title}}</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

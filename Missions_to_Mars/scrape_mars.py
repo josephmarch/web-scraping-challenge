@@ -29,6 +29,7 @@ def scrape():
     url = "https://galaxyfacts-mars.com/"
     tables = pd.read_html(url, header=0)
     mars_df = tables[0]
+    mars_df.set_index("Mars - Earth Comparison", inplace=True)
     # Use Pandas to convert the data to a HTML table string
     html_table = mars_df.to_html()
     # Obtain high resolution images for each of Mar's hemispheres at https://marshemispheres.com/
